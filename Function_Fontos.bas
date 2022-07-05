@@ -3,6 +3,8 @@ Option Explicit
 
 Sub Fontos()
 
+Munka2.Select
+
 ' - kész, lefut jó
 
 AppCikkek.TextBox21.Value = Munka2.Range("cs2").Value

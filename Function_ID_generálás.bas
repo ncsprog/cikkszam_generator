@@ -3,6 +3,8 @@ Option Explicit
 
 Sub ID_generálás()
 
+Munka1.Select
+
 Dim most As Date, ID_rw As Long
 most = Now()
 

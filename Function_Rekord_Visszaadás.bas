@@ -3,14 +3,15 @@ Option Explicit
 
 Sub Rekord_Visszaadás()
 
-Dim Rw As Integer, rngList As Range
+Munka1.Select
 
-Munka1.Range("a1").Select
+Dim Rw As Long, rngList As Range
+
 Columns("a:a").Select
 Selection.End(xlDown).Select
 Rw = ActiveCell.Row
 
-Set rngList = Munka1.Range("a1", "v" & Rw)
+Set rngList = Munka1.Range("a3", "v" & Rw)
 AppCikkek.ListBox1.List = rngList.Value
  
 

@@ -3,6 +3,8 @@ Option Explicit
 
 Sub Státusz_Csere()
 
+Munka2.Select
+
 Dim JelöltSor As String, Sor As Integer, S1 As Integer, Sn As Integer
 If AppCikkek.TextBox20 = "" Then
 Exit Sub

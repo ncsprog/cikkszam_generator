@@ -3,32 +3,36 @@ Option Explicit
 
 Sub Cikkszám_4()
 
-Dim Rw As Integer, Elõtag As Integer, Db As Integer, Utótag As Integer, UtóH As Integer
+Munka1.Select
 
-Elõtag = Munka1.Range("x1").Value & Munka1.Range("y1").Value & Munka1.Range("z1").Value
-
-Munka1.Range("p1").Select
+Dim Elõtag As Integer, S1 As Integer, Sx As Long, MyRange As Range, Keresett As Integer, Utótag As Integer
+S1 = Munka1.Range("p1").Row
 Columns("p:p").Select
 Selection.End(xlDown).Select
-Rw = ActiveCell.Row + 1
+Sx = ActiveCell.Row
+Keresett = Munka1.Range("p" & Sx).Value
+Set MyRange = Munka1.Range("p" & S1, "p" & Sx)
+Elõtag = Application.WorksheetFunction.CountIf(MyRange, Keresett)
 
-Db = Application.WorksheetFunction.CountIf(Range("p3", "p" & Rw), Elõtag)
-Utótag = Db + 1
-UtóH = Len(Db)
-Munka1.Range("p" & Rw).Value = Elõtag
-If Utótag > 950 Then
-MsgBox "Hamarosan eléri a maximum darabszámot ez a Cikkfaj!"
-End If
-If Utótag = 1000 Then
-MsgBox "Elfogyott a cikktárhely, keress másik cikkosztályt!"
+If Elõtag > 999 Then
+MsgBox "Ez a kategória #999 rekordnál betellt."
+Munka1.Range("a" & Sx, "v" & Sx) = ""
 Exit Sub
 End If
-If UtóH = 1 Then
-Munka1.Range("q" & Rw).Value = "Kar" & Elõtag & "00" & Utótag
-ElseIf UtóH = 2 Then
-Munka1.Range("q" & Rw).Value = "Kar" & Elõtag & "0" & Utótag
-ElseIf UtóH = 3 Then
-Munka1.Range("q" & Rw).Value = "Kar" & Elõtag & Utótag
+
+If Elõtag < 10 Then
+Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & "00" & Elõtag
+Else
+End If
+
+If Elõtag > 9 Then
+Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & "0" & Elõtag
+Else
+End If
+
+If Elõtag > 99 Then
+Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & Elõtag
+Else
 End If
 
 End Sub

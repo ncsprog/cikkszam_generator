@@ -2,6 +2,9 @@ Attribute VB_Name = "Function_Cikkosztály_Csere"
 Option Explicit
 
 Sub Cikkosztály_Csere()
+
+Munka2.Select
+
 Dim JelöltOsztály As String, Oszlop As Integer, O1 As Integer, Ox As Integer, _
 Sor As Integer, S1 As Integer, Sx As Integer
 

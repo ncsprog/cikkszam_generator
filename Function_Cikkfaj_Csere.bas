@@ -2,6 +2,9 @@ Attribute VB_Name = "Function_Cikkfaj_Csere"
 Option Explicit
 
 Sub Cikkfaj_Csere()
+
+Munka2.Select
+
 Dim JelöltFaj As String, Oszlop As Integer, O1 As Integer, Ox As Integer, _
 Sor As Integer, S1 As Integer, Sx As Integer, JelöltOsztály As String
 

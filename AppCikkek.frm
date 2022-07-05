@@ -24,10 +24,28 @@ AppCikkek.ComboBox11.Clear
 Cikkosztály
 End Sub
 
+Private Sub ComboBox2_Change()
+Cikkosztály_lista
+
+End Sub
+
+Private Sub ComboBox3_Change()
+
+Cikkfaj_lista
+
+End Sub
+
 Private Sub CommandButton1_Click()
 ID_generálás
 IDgenerálás
+
+Cikkszám_1
+Cikkszám_2
+Cikkszám_3
+Cikkszám_4
 Mentés
+Rekord_Visszaadás
+
 End Sub
 Private Sub CommandButton3_Click()  ' - Beállítások > Rögzítés
 '
@@ -43,7 +61,7 @@ Cikktörzs_Csere    ' - ok
 '
 Cikkosztály_Csere    ' - ok
 '
-Cikkfaj_Csere
+Cikkfaj_Csere   ' - ok
 
 AppCikkek.ComboBox11.Clear
 AppCikkek.ComboBox14.Clear
@@ -79,6 +97,7 @@ Relevancia
 Mértékegység
 Státusz
 Cikktörzs
+
 
 End Sub
 

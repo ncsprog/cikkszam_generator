@@ -3,6 +3,9 @@ Option Explicit
 
 Sub Mentés()
 ' - kész
+
+Munka1.Select
+
 Dim Rwnr As Integer
 
 Munka1.Select

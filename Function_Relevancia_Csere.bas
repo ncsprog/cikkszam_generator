@@ -3,6 +3,8 @@ Option Explicit
 
 Sub Relevancia_Csere()
 
+Munka2.Select
+
 Dim JelöltSor As String, Sor As Integer, S1 As Integer, Sn As Integer, Új As String
 If AppCikkek.TextBox20.Value = "" Then
 Exit Sub

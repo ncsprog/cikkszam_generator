@@ -3,6 +3,8 @@ Option Explicit
 
 Sub IDgenerálás()
 
+Munka1.Select
+
 Dim Idrw As Integer, Idnr As Integer
 
 Sheets("adatok").Select
