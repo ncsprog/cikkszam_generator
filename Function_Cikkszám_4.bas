@@ -16,9 +16,8 @@ Db = Application.WorksheetFunction.CountIf(Range("p3", "p" & Rw), Elõtag)
 Utótag = Db + 1
 UtóH = Len(Db)
 Munka1.Range("p" & Rw).Value = Elõtag
-
 If Utótag > 950 Then
-MsgBox "Hamarosan eléri a maximum darabszámot ez a Cikkfaj!)"
+MsgBox "Hamarosan eléri a maximum darabszámot ez a Cikkfaj!"
 End If
 If Utótag = 1000 Then
 MsgBox "Elfogyott a cikktárhely, keress másik cikkosztályt!"

@@ -2,8 +2,27 @@ Attribute VB_Name = "Function_Cikkszám_1"
 Option Explicit
 
 Sub Cikkszám_1()
+' - cikktörzs
+' - munka2.a2-a10
 
-Dim Fst As Integer, Snd As Integer, Trd As Integer, Foth As Integer, Fith As Integer, Sith As Integer, Seth As Integer, Eith As Integer, Nith As Integer
+Dim Row1 As Integer, Rw2 As Integer, Rw10 As Integer
+
+For Row1 = Rw2 To Rw10 Step 1
+
+
+
+
+
+
+
+
+
+Dim Fst As Integer, Snd As Integer, Trd As Integer, Foth As Integer, Fith As Integer, Sith As Integer, Seth As Integer, Eith As Integer, Nith As Integer, _
+Row1 As Integer, RwA As Integer, RwX As Integer
+
+
+
+
 Fst = 1
 Snd = 2
 Trd = 3
@@ -14,6 +33,14 @@ Seth = 7
 Eith = 8
 Nith = 9
 ' - elsõ tag
+
+
+
+
+
+
+
+
 If AppCikkek.ComboBox2.Value = "" Then
 Munka1.Range("x1").Value = 0
 ElseIf AppCikkek.ComboBox2.Value = Munka2.Range("b4").Value Then

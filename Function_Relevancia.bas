@@ -3,7 +3,8 @@ Option Explicit
 
 Sub Relevancia()
 
-AppCikkek.ComboBox1.AddItem "Kritikus"
-AppCikkek.ComboBox1.AddItem "Normál"
+Dim rngList As Range, JelöltSor As String
+Set rngList = Munka2.Range("cu2:cu10")
+AppCikkek.ComboBox13.List = rngList.Value
 
 End Sub

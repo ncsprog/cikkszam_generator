@@ -6,7 +6,7 @@ Sub ID_generálás()
 Dim most As Date, ID_rw As Long
 most = Now()
 
-Sheets("adatok").Select
+Munka1.Range("o1").Select
 Columns("o:o").Select
 Selection.End(xlDown).Select
 ID_rw = ActiveCell.Row + 1

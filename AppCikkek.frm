@@ -13,32 +13,72 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Option Explicit
-
-Private Sub CommandButton1_Click()
-'Ellenõrzés
-Mentés
-Cikkszám_1
-Cikkszám_2
-Cikkszám_3
-Cikkszám_4
-IDgenerálás
-ID_generálás
+Private Sub ComboBox11_Change()
+AppCikkek.ComboBox10.Clear
+Cikkfaj
 End Sub
 
-Private Sub CommandButton2_Click()
-Ûrlap_Törlés
+Private Sub ComboBox12_Change()
+AppCikkek.ComboBox10.Clear
+AppCikkek.ComboBox11.Clear
+Cikkosztály
+End Sub
+
+Private Sub CommandButton1_Click()
+ID_generálás
+IDgenerálás
+Mentés
+End Sub
+Private Sub CommandButton3_Click()  ' - Beállítások > Rögzítés
+'
+Elõtag_Csere    ' - ok
+'
+Relevancia_Csere    ' - ok
+'
+Mértékegység_Csere    ' - ok
+'
+Státusz_Csere    ' - ok
+'
+Cikktörzs_Csere    ' - ok
+'
+Cikkosztály_Csere    ' - ok
+'
+Cikkfaj_Csere
+
+AppCikkek.ComboBox11.Clear
+AppCikkek.ComboBox14.Clear
+AppCikkek.ComboBox12.Clear
+AppCikkek.ComboBox9.Clear
+AppCikkek.ComboBox15.Clear
+AppCikkek.ComboBox13.Clear
+AppCikkek.ComboBox10.Clear
+AppCikkek.TextBox20 = ""
+
+UserForm_Initialize
+
+End Sub
+
+
+Private Sub CommandButton4_Click()
+
+AppCikkek.ComboBox11.Clear
+AppCikkek.ComboBox14.Clear
+AppCikkek.ComboBox12.Clear
+AppCikkek.ComboBox9.Clear
+AppCikkek.ComboBox15.Clear
+AppCikkek.ComboBox13.Clear
+AppCikkek.ComboBox10.Clear
+UserForm_Initialize
+
 End Sub
 
 Private Sub UserForm_Initialize()
-AppCikkek.TextBox9.Value = Date
-'Utolsó_Cikkszám
+Fontos
+Elõtag
 Relevancia
-Cikk_Kategória
-End Sub
-Sub ComboBox2_Click()
+Mértékegység
+Státusz
 Cikktörzs
+
 End Sub
-Sub ComboBox3_Click()
-Cikkosztály
-End Sub
+
