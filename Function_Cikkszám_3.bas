@@ -19,7 +19,7 @@ For Oszlop = 1 To Ox Step 1
     For Sor = S1 To Sx Step 1
         If Munka2.Cells(Sor, Oszlop).Value = JelöltFaj Then
             TaláltSor = Munka2.Cells(Sor, Oszlop).Row - 1
-            Munka1.Range("y1").Value = TaláltSor
+            Munka1.Range("z1").Value = TaláltSor
         End If
     Next
 Next
@@ -29,6 +29,7 @@ Munka1.Select
 Columns("o:o").Select
 Selection.End(xlDown).Select
 ElõtagSor = ActiveCell.Row
-Munka1.Range("p" & ElõtagSor).Value = Munka1.Range("w1").Value & Munka1.Range("x1").Value & Munka1.Range("y1").Value
+Munka1.Range("p" & ElõtagSor).Value = Munka1.Range("x1").Value & Munka1.Range("y1").Value & Munka1.Range("z1").Value
+
 
 End Sub

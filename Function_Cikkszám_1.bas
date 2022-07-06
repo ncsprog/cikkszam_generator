@@ -20,5 +20,5 @@ If AppCikkek.ComboBox2.Value <> "" Then
 End If
 
 Munka1.Select
-Munka1.Range("w1").Value = TaláltSor
+Munka1.Range("x1").Value = TaláltSor
 End Sub

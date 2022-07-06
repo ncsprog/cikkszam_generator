@@ -50,6 +50,8 @@ Munka1.Range("t" & Rwnr).Value = AppCikkek.TextBox12.Value
 Munka1.Range("u" & Rwnr).Value = AppCikkek.TextBox13.Value
 ' - megnevezés - V
 Munka1.Range("v" & Rwnr).Value = AppCikkek.TextBox14.Value
+' - megnevezés - w
+Munka1.Range("w" & Rwnr).Value = AppCikkek.ComboBox7.Value
 
 AppCikkek.TextBox3 = ""
 AppCikkek.TextBox4 = ""

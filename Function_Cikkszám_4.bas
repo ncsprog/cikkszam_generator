@@ -1,4 +1,5 @@
 Attribute VB_Name = "Function_Cikkszám_4"
+
 Option Explicit
 
 Sub Cikkszám_4()
@@ -21,17 +22,17 @@ Exit Sub
 End If
 
 If Elõtag < 10 Then
-Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & "00" & Elõtag
+Munka1.Range("q" & Sx).Value = AppCikkek.ComboBox7.Value & Munka1.Range("p" & Sx).Value & "00" & Elõtag
 Else
 End If
 
 If Elõtag > 9 Then
-Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & "0" & Elõtag
+Munka1.Range("q" & Sx).Value = AppCikkek.ComboBox7.Value & Munka1.Range("p" & Sx).Value & "0" & Elõtag
 Else
 End If
 
 If Elõtag > 99 Then
-Munka1.Range("q" & Sx).Value = Munka1.Range("p" & Sx).Value & Elõtag
+Munka1.Range("q" & Sx).Value = AppCikkek.ComboBox7.Value & Munka1.Range("p" & Sx).Value & Elõtag
 Else
 End If
 

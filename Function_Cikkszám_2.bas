@@ -18,7 +18,7 @@ For Oszlop = 1 To Ox Step 1
     For Sor = S1 To Sx Step 1
         If Munka2.Cells(Sor, Oszlop).Value = JelöltOsztály Then
             TaláltSor = Munka2.Cells(Sor, Oszlop).Row - 1
-            Munka1.Range("x1").Value = TaláltSor
+            Munka1.Range("y1").Value = TaláltSor
         End If
     Next
 Next

@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} AppCikkek 
-   Caption         =   "Cikkek"
+   Caption         =   "Cikkek V.0.1.0."
    ClientHeight    =   12420
    ClientLeft      =   120
    ClientTop       =   465
@@ -47,6 +47,12 @@ Mentés
 Rekord_Visszaadás
 
 End Sub
+
+Private Sub CommandButton2_Click()
+Ûrlap_Törlés
+UserForm_Initialize
+End Sub
+
 Private Sub CommandButton3_Click()  ' - Beállítások > Rögzítés
 '
 Elõtag_Csere    ' - ok
@@ -62,6 +68,8 @@ Cikktörzs_Csere    ' - ok
 Cikkosztály_Csere    ' - ok
 '
 Cikkfaj_Csere   ' - ok
+'
+Feliratok_Csere ' - ok
 
 AppCikkek.ComboBox11.Clear
 AppCikkek.ComboBox14.Clear
@@ -70,6 +78,7 @@ AppCikkek.ComboBox9.Clear
 AppCikkek.ComboBox15.Clear
 AppCikkek.ComboBox13.Clear
 AppCikkek.ComboBox10.Clear
+AppCikkek.ComboBox16.Clear
 AppCikkek.TextBox20 = ""
 
 UserForm_Initialize
@@ -90,13 +99,25 @@ UserForm_Initialize
 
 End Sub
 
+Private Sub CommandButton5_Click()
+Reset_Full
+UserForm_Initialize
+End Sub
+
+Private Sub CommandButton6_Click()
+Reset
+UserForm_Initialize
+End Sub
+
 Private Sub UserForm_Initialize()
+Feliratok_Címzés
 Fontos
 Elõtag
 Relevancia
 Mértékegység
 Státusz
 Cikktörzs
+Feliratok
 
 
 End Sub
